@@ -17,12 +17,15 @@
     :root{
       --bg:#0b1020; --bg2:#0f1730; --card:#111a36; --text:#eaf0ff; --muted:#a8b3d0;
       --brand:#7bdcff; --good:#78ffa6; --shadow:0 10px 30px rgba(0,0,0,.35); --radius:18px;
-      --pickGlow: 0 0 0 2px rgba(255, 77, 77, .6),
-                  0 0 12px rgba(255, 77, 77, .5),
-                  0 0 24px rgba(255, 77, 77, .4);
-      --pickGlowPulse: 0 0 0 3px rgba(255, 77, 77, .75),
-                       0 0 20px rgba(255, 77, 77, .6),
-                       0 0 36px rgba(255, 77, 77, .5);
+      /* Softer RED GLOW for spread pick (reduced intensity) */
+--pickGlow: 0 0 0 2px rgba(255, 77, 77, .6),
+            0 0 12px rgba(255, 77, 77, .5),
+            0 0 24px rgba(255, 77, 77, .4);
+--pickGlowPulse: 0 0 0 3px rgba(255, 77, 77, .75),
+                 0 0 20px rgba(255, 77, 77, .6),
+                 0 0 36px rgba(255, 77, 77, .5);
+
+      /* tight edge dot color */
       --tight:#F3C97A;
     }
 
@@ -54,17 +57,21 @@
     thead th{ position:sticky; top:0; background:rgba(15,23,48,.9); color:#fff; font-size:13px; letter-spacing:.3px; z-index:1; border-bottom: 1px solid rgba(255,255,255,.18); }
     th, td{ border-bottom:1px solid rgba(255,255,255,.08); padding:10px; text-align:center; vertical-align: middle; }
 
+    /* zebra + hover */
     tbody tr:nth-child(odd){ background: rgba(255,255,255,.02); }
     tbody tr:hover{ background: rgba(123,220,255,.08); box-shadow: inset 0 0 0 9999px rgba(123,220,255,.06); }
 
+    /* align numerics */
     td:nth-child(3), td:nth-child(4), td:nth-child(5), th:nth-child(3), th:nth-child(4), th:nth-child(5){ font-variant-numeric: tabular-nums; }
 
+    /* Teams stack — inline grid = shrink-to-fit on desktop */
     td:nth-child(2), th:nth-child(2){ width:1%; }
     .teams{ display:inline-grid; grid-template-columns: 1fr; gap:6px; text-align:left; }
     .team{ display:flex; align-items:center; gap:8px; min-width: 0; }
     .team img{ height:22px; width:22px; object-fit: contain; border-radius: 6px; background:#fff; flex: 0 0 22px; transition: box-shadow .35s ease; }
     .team span{ display:block; white-space:nowrap; line-height:1.2; }
 
+    /* Softer RED GLOW for spread pick */
     .team.pick img{ box-shadow: var(--pickGlow); }
     @keyframes glowPulseRed{
       0%,100% { box-shadow: var(--pickGlow); }
@@ -73,6 +80,7 @@
     .team.pick img{ animation: glowPulseRed 2.8s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce){ .team.pick img{ animation: none; } }
 
+    /* Scores stack (desktop centered) */
     .scores{
       display: grid; grid-auto-rows: min-content; gap: 6px;
       justify-items: center; align-content: center; text-align: center;
@@ -82,9 +90,18 @@
     .muted{ color:var(--muted) }
     .num{ white-space:nowrap; }
 
+    /* chevrons */
     .chev{ font-size:13px; opacity:.9; margin-left:6px; }
     .chev[title]{ cursor:help; }
 
+    /* Column sizing via colgroup */
+    col.col-idx{ width:56px; }
+    col.col-teams{ width:1%; }  /* shrink-to-fit desktop */
+    col.col-proj{ width:120px; }
+    col.col-spr{  width:120px; }
+    col.col-tot{  width:96px; }
+
+    /* Legend */
     .legend{
       display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center;
       color:var(--muted); font-size:12px; padding:6px 2px 0;
@@ -98,6 +115,7 @@
     }
     .legend span{ display:inline-flex; align-items:center; gap:6px; }
 
+    /* Tight edge dot used inline after numbers */
     .tight-dot{
       display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--tight);
       box-shadow: 0 0 0 1px rgba(255,255,255,.15), 0 0 8px rgba(243,201,122,.45);
@@ -112,8 +130,11 @@
     }
 
     @media (max-width: 560px){
+      /* Mobile: stacked scores, right aligned */
       .scores{ gap:2px; justify-items:end; text-align:right; }
       .scores .score{ font-size:12px; line-height:1.1; }
+
+      /* Make Teams column wider on mobile */
       .table-wrap table{ table-layout: fixed; }
       col.col-teams{ width:52%; }
       col.col-proj{  width:100px; }
@@ -123,9 +144,7 @@
     }
 
     @media (max-width: 520px){
-      /* Modified: hide first col unless it's Rk in ratings mode */
-      th:first-child:not(.rk-head), td:first-child:not(.rk-col){ display:none; }
-
+      th:first-child, td:first-child{ display:none; }
       .title{ font-size:20px; } th, td{ font-size:12px; }
       .team img{ height:18px; width:18px; flex-basis:18px; }
       .team span{ white-space:normal; font-size:12px; }
@@ -143,6 +162,7 @@
     footer{ text-align:center; margin-top:14px; color:var(--muted); font-size:12px }
   </style>
 
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FGSY9FNSQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -163,6 +183,7 @@
       </div>
       <div class="row">
         <a class="btn" href="index.html">← Home</a>
+        <!-- ADDED: dataset toggle buttons -->
         <button class="btn" id="showProj">Projections</button>
         <button class="btn" id="showRatings">Ratings</button>
         <div id="adminBar">
@@ -174,6 +195,7 @@
     </header>
 
     <section class="panel">
+      <!-- Legend -->
       <div class="legend" aria-label="Legend">
         <span><span class="dot-glow" aria-hidden="true"></span>Spread Pick (logo glow)</span>
         <span><span class="tight-dot" aria-hidden="true"></span>Best Edge ≤ 3</span>
@@ -216,20 +238,31 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // CSV path (override with ?csv=)
     const CSV_OVERRIDE = new URLSearchParams(location.search).get('csv');
     const REPO_CSV = CSV_OVERRIDE ? new URL(CSV_OVERRIDE, location.href).toString()
                                   : new URL('./data/cfb.csv', location.href).toString();
+
+    // ADDED: ratings path + mode
     const RATINGS_CSV = new URL('./data/cfb.ratings', location.href).toString();
     let currentCSV = REPO_CSV;
-    let mode = 'proj';
+    let mode = 'proj'; // 'proj' | 'ratings'
 
+    // Buttons
     document.getElementById('showProj').addEventListener('click', ()=>{
-      currentCSV = REPO_CSV; mode = 'proj'; setHeaders(); loadFromRepo();
+      currentCSV = REPO_CSV;
+      mode = 'proj';
+      setHeaders();
+      loadFromRepo();
     });
     document.getElementById('showRatings').addEventListener('click', ()=>{
-      currentCSV = RATINGS_CSV; mode = 'ratings'; setHeaders(); loadFromRepo();
+      currentCSV = RATINGS_CSV;
+      mode = 'ratings';
+      setHeaders();
+      loadFromRepo();
     });
 
+    // keep your original triggers
     loadFromRepo();
     document.getElementById('useRepo').addEventListener('click', loadFromRepo);
     document.getElementById('file').addEventListener('change', (e)=>{
@@ -239,10 +272,11 @@
       reader.readAsText(file);
     });
 
+    // ADDED: dynamic headers based on mode
     function setHeaders(){
       if(mode === 'ratings'){
         $theadRow.innerHTML = `
-          <th scope="col" class="rk-head">Rk</th>
+          <th scope="col">Rk</th>
           <th scope="col">Team</th>
           <th scope="col">Off Rk</th>
           <th scope="col">Def Rk</th>
@@ -303,18 +337,22 @@
     function render(rows){
       if(!rows?.length){ $body.innerHTML = '<tr><td colspan="5" class="muted">No rows</td></tr>'; return; }
 
+      // Ratings vs Projections rendering
       if(mode === 'ratings' || ('Rk' in rows[0] && 'Team' in rows[0] && 'Off_R' in rows[0])){
+        // ---- RATINGS MODE ----
+        // sort by numeric Rk if needed
         rows = rows.slice().sort((a,b)=> (n(a.Rk)||0) - (n(b.Rk)||0));
+
         $body.innerHTML = rows.map(r=>{
           const rk  = n(r.Rk) ?? '';
           const tm  = r.Team || '';
-          const off = n(r.Off_R);
+          const off = n(r.Off_R); 
           const def = n(r.Def_R);
           const id  = r.Identity || '';
 
           return `
             <tr>
-              <td class="num rk-col">${rk}</td>
+              <td class="num">${rk}</td>
               <td>
                 <div class="teams">
                   <div class="team">
@@ -328,7 +366,11 @@
             </tr>
           `;
         }).join('');
+
       } else {
+        // ---- PROJECTIONS MODE (your original logic) ----
+
+        // keep original order if '#' provided; otherwise sort by Total desc
         const hasIndex = rows[0] && ('#' in rows[0]);
         if(!hasIndex){ rows = rows.slice().sort((a,b)=> (n(b.Total)||0) - (n(a.Total)||0)); }
 
@@ -336,30 +378,41 @@
           const i = r['#'] || (idx+1);
           const h = r.Home || ''; const a = r.Away || '';
           const hp = n(r.Home_Proj); const ap = n(r.Away_Proj);
+
+          /* Spread: use model xSpread */
           const xSpr = n(r.xSpread);
+
+          /* Total: now use model xTotal */
           const xTot = n(r.xTotal);
+
           const sprEdge = n(r['Spread Edge']);
           const totEdge = n(r['Total Edge']);
-          const sprBet = r['Spread Bet'] || '';
+          const sprBet = r['Spread Bet'] || '';          // full team name string
           const totBet = (r['Total Bet'] || '').toLowerCase();
           const hlogo = r.HomeLogo; const alogo = r.AwayLogo;
 
+          // Which team is the spread pick? (apply softer red glow to its logo)
           const spreadBetNorm = norm(sprBet);
           const isHomePick = spreadBetNorm && spreadBetNorm === norm(h);
           const isAwayPick = spreadBetNorm && spreadBetNorm === norm(a);
 
+          // Stacked (A on top, H below)
           const projHTML = `
             <div class="scores">
               <div class="score">${ap!=null ? ap.toFixed(1) : '—'}</div>
               <div class="score">${hp!=null ? hp.toFixed(1) : '—'}</div>
             </div>`;
 
+          // Tight edge dot helper
           const tightDot = `<span class="tight-dot" aria-label="Tight edge ≤ 3" title="Tight edge ≤ 3"></span>`;
+
+          // Spread text (xSpread) + tight dot
           const spreadIsTight = sprEdge!=null && Math.abs(sprEdge) <= 3;
           const sprTxt = xSpr!=null
             ? `${xSpr>0?`+${xSpr.toFixed(1)}`:xSpr.toFixed(1)}${spreadIsTight ? tightDot : ''}`
             : '—';
 
+          // Total text (xTotal) with chevron + optional dot
           let chev = '';
           if(totBet === 'over') chev = ` <span class="chev" title="Total: Over">▲</span>`;
           else if(totBet === 'under') chev = ` <span class="chev" title="Total: Under">▼</span>`;
