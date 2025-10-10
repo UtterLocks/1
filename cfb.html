@@ -239,9 +239,10 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // CSV path (override with ?csv=)
-    const CSV_OVERRIDE = new URLSearchParams(location.search).get('csv');
-    const REPO_CSV = CSV_OVERRIDE ? new URL(CSV_OVERRIDE, location.href).toString()
-                                  : new URL('./data/cfb.csv', location.href).toString();
+const CSV_OVERRIDE = new URLSearchParams(location.search).get('csv');
+const REPO_CSV = CSV_OVERRIDE ? new URL(CSV_OVERRIDE, location.href).toString()
+                              : new URL('./data/cfb_live.csv', location.href).toString();
+
 
     // ADDED: ratings path + mode
     const RATINGS_CSV = new URL('./data/cfb.ratings', location.href).toString();
