@@ -10,17 +10,17 @@
 9,Utah State,San José State,36.6,28.6,-8.1,65.2,-3.0,63.5,-5.1,-1.7,Utah State,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/328.png,http://a.espncdn.com/i/teamlogos/ncaa/500/23.png
 10,California,North Carolina,22.5,21.5,-1,43.9,-10.0,47.5,9,3.6,North Carolina,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/25.png,http://a.espncdn.com/i/teamlogos/ncaa/500/153.png
 11,Vanderbilt,LSU,23.2,29.2,6,52.5,-2.5,48.0,8.5,-4.5,LSU,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/238.png,http://a.espncdn.com/i/teamlogos/ncaa/500/99.png
-12,Duke,Georgia Tech,34.3,26.9,-7.4,61.2,-1.5,61.5,-5.9,0.3,Duke,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/150.png,http://a.espncdn.com/i/teamlogos/ncaa/500/59.png
+12,Duke,Georgia Tech,34.3,26.9,-7.4,61.2,-1.5,60.0,-5.9,-1.2,Duke,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/150.png,http://a.espncdn.com/i/teamlogos/ncaa/500/59.png
 13,Michigan,Washington,32.5,21,-11.5,53.5,-6.0,50.0,-5.5,-3.5,Michigan,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/130.png,http://a.espncdn.com/i/teamlogos/ncaa/500/264.png
 14,Boston College,UConn,26.5,29.3,2.8,55.7,-1.5,56.5,4.3,0.8,UConn,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/103.png,https://a.espncdn.com/i/teamlogos/ncaa/500/default.png
 15,Houston,Arizona,19.4,25,5.6,44.4,1.0,45.5,4.6,1.1,Arizona,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/248.png,http://a.espncdn.com/i/teamlogos/ncaa/500/12.png
 16,TCU,Baylor,42.9,30,-13,72.9,-3.0,66.0,-10,-6.9,TCU,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/2628.png,http://a.espncdn.com/i/teamlogos/ncaa/500/239.png
-17,Tulane,Army,33.1,16.2,-16.9,49.2,-9.5,45.5,-7.4,-3.7,Tulane,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/2655.png,http://a.espncdn.com/i/teamlogos/ncaa/500/349.png
+17,Tulane,Army,33.1,16.2,-16.9,49.2,-9.5,45.0,-7.4,-4.2,Tulane,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/2655.png,http://a.espncdn.com/i/teamlogos/ncaa/500/349.png
 18,Bowling Green,Central Michigan,37.5,18.3,-19.2,55.8,-4.0,43.0,-15.2,-12.8,Bowling Green,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/189.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2117.png
 19,Miami (OH),Eastern Michigan,29,21,-8,50,-13.0,46.0,5,-4,Eastern Michigan,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/193.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2199.png
 20,South Carolina,Oklahoma,13.5,19.3,5.8,32.7,5.0,43.5,0.8,10.8,Oklahoma,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/2579.png,http://a.espncdn.com/i/teamlogos/ncaa/500/201.png
 21,UCF,West Virginia,29.7,18.7,-11,48.4,-7.0,47.0,-4,-1.4,UCF,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/2116.png,http://a.espncdn.com/i/teamlogos/ncaa/500/277.png
-22,Toledo,Kent State,33.5,13,-20.6,46.5,-26.0,51.5,5.4,5,Kent State,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/2649.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2309.png
+22,Toledo,Kent State,33.5,13,-20.6,46.5,-26.0,52.5,5.4,6,Kent State,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/2649.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2309.png
 23,Massachusetts,Buffalo,15.4,30.9,15.5,46.3,17.0,45.0,-1.5,-1.3,Massachusetts,Over,https://a.espncdn.com/i/teamlogos/ncaa/500/default.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2084.png
 24,Northwestern,Purdue,23.3,23.7,0.4,46.9,-3.0,47.0,3.4,0.1,Purdue,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/77.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2509.png
 25,UL Monroe,Troy,18.8,28.3,9.4,47.1,6.0,46.5,3.4,-0.6,Troy,Over,https://a.espncdn.com/i/teamlogos/ncaa/500/default.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2653.png
@@ -37,12 +37,12 @@
 36,Charlotte,Temple,19.6,21.5,1.9,41,12.0,47.0,-10.1,6,Charlotte,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/2429.png,http://a.espncdn.com/i/teamlogos/ncaa/500/218.png
 37,North Texas,UTSA,36.8,32.9,-3.9,69.6,-4.0,67.5,0.1,-2.1,UTSA,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/249.png,https://a.espncdn.com/i/teamlogos/ncaa/500/default.png
 38,Ohio,Northern Illinois,22.1,12,-10.1,34,-12.0,41.5,1.9,7.5,Northern Illinois,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/195.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2459.png
-39,Ball State,Akron,21.3,17.6,-3.7,38.9,-1.0,43.0,-2.7,4.1,Ball State,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/2050.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2006.png
+39,Ball State,Akron,21.3,17.6,-3.7,38.9,-1.0,42.0,-2.7,3.1,Ball State,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/2050.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2006.png
 40,Arizona State,Texas Tech,22,31.9,9.9,53.9,7.5,51.5,2.4,-2.4,Texas Tech,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/9.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2641.png
 41,UAB,Memphis,17.9,48.3,30.4,66.2,21.5,64.5,8.9,-1.7,Memphis,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/5.png,http://a.espncdn.com/i/teamlogos/ncaa/500/235.png
 42,Florida,Mississippi State,28.2,19.6,-8.6,47.7,-8.5,50.5,-0.1,2.8,Florida,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/57.png,http://a.espncdn.com/i/teamlogos/ncaa/500/344.png
 43,Louisiana,Southern Miss,28.3,25.5,-2.8,53.8,4.0,54.5,-6.8,0.7,Louisiana,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/309.png,https://a.espncdn.com/i/teamlogos/ncaa/500/default.png
-44,Rutgers,Oregon,22.1,47.3,25.2,69.3,17.0,60.0,8.2,-9.3,Oregon,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/164.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2483.png
+44,Rutgers,Oregon,22.1,47.3,25.2,69.3,17.0,59.0,8.2,-10.3,Oregon,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/164.png,http://a.espncdn.com/i/teamlogos/ncaa/500/2483.png
 45,Virginia,Washington State,31.9,25,-6.9,56.8,-17.5,56.5,10.6,-0.3,Washington State,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/258.png,http://a.espncdn.com/i/teamlogos/ncaa/500/265.png
 46,Kentucky,Texas,15,27.9,13,42.9,12.0,43.0,1,0.1,Texas,Under,http://a.espncdn.com/i/teamlogos/ncaa/500/96.png,http://a.espncdn.com/i/teamlogos/ncaa/500/251.png
 47,Iowa,Penn State,24.8,23.6,-1.1,48.4,-3.0,40.0,1.9,-8.4,Penn State,Over,http://a.espncdn.com/i/teamlogos/ncaa/500/2294.png,http://a.espncdn.com/i/teamlogos/ncaa/500/213.png
