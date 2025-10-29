@@ -1,137 +1,137 @@
 Rk,Team,Off_R,Def_R,Identity
-1,Ohio State,1,1,⚖️ Balanced
-2,Oregon,8,4,⚖️ Balanced
-3,Alabama,4,7,⚖️ Balanced
-4,Oklahoma,37,2,🛡 Defense-Driven
-5,Georgia,3,10,⚖️ Balanced
-6,Indiana,9,5,⚖️ Balanced
-7,Notre Dame,7,6,⚖️ Balanced
-8,Texas,41,3,🛡 Defense-Driven
-9,Miami,6,15,⚖️ Balanced
-10,Ole Miss,5,17,🔥 Offense-Driven
-11,Texas A&M,13,18,⚖️ Balanced
-12,Michigan,22,9,🛡 Defense-Driven
-13,USC,2,44,🔥 Offense-Driven
-14,Texas Tech,20,13,⚖️ Balanced
-15,Penn State,12,22,⚖️ Balanced
-16,LSU,31,8,🛡 Defense-Driven
-17,Iowa,34,12,🛡 Defense-Driven
-18,Missouri,17,28,🔥 Offense-Driven
-19,Tennessee,14,36,🔥 Offense-Driven
-20,Louisville,26,20,⚖️ Balanced
-21,Utah,27,19,⚖️ Balanced
-22,Florida,43,14,🛡 Defense-Driven
-23,TCU,16,32,🔥 Offense-Driven
-24,Auburn,52,11,🛡 Defense-Driven
-25,SMU,25,23,⚖️ Balanced
-26,BYU,28,27,⚖️ Balanced
-27,Vanderbilt,10,66,🔥 Offense-Driven
-28,Clemson,40,24,🛡 Defense-Driven
-29,Arkansas,11,64,🔥 Offense-Driven
-30,Illinois,15,57,🔥 Offense-Driven
-31,Nebraska,39,31,⚖️ Balanced
-32,Duke,29,46,🔥 Offense-Driven
-33,Kansas State,33,42,⚖️ Balanced
-34,Kansas,23,52,🔥 Offense-Driven
-35,Mississippi State,35,43,⚖️ Balanced
-36,Arizona State,38,39,⚖️ Balanced
-37,Iowa State,42,45,⚖️ Balanced
-38,Kentucky,54,30,🛡 Defense-Driven
-39,Florida State,36,48,🔥 Offense-Driven
-40,South Carolina,73,16,🛡 Defense-Driven
-41,Pittsburgh,49,38,🛡 Defense-Driven
-42,Cincinnati,21,68,🔥 Offense-Driven
-43,Washington,30,61,🔥 Offense-Driven
-44,Tulane,50,41,⚖️ Balanced
-45,Georgia Tech,32,59,🔥 Offense-Driven
-46,Baylor,19,78,🔥 Offense-Driven
-47,Arizona,58,37,🛡 Defense-Driven
-48,UCF,60,35,🛡 Defense-Driven
-49,Colorado,44,55,🔥 Offense-Driven
-50,Memphis,47,51,⚖️ Balanced
-51,South Florida,55,49,⚖️ Balanced
-52,Maryland,74,25,🛡 Defense-Driven
-53,Virginia,46,62,🔥 Offense-Driven
-54,Minnesota,67,34,🛡 Defense-Driven
-55,North Texas,18,89,🔥 Offense-Driven
-56,UCLA,56,63,⚖️ Balanced
-57,Northwestern,90,26,🛡 Defense-Driven
-58,James Madison,81,33,🛡 Defense-Driven
-59,Michigan State,51,70,🔥 Offense-Driven
-60,Washington State,62,56,⚖️ Balanced
-61,NC State,53,75,🔥 Offense-Driven
-62,Rutgers,24,100,🔥 Offense-Driven
-63,East Carolina,71,54,🛡 Defense-Driven
-64,Boise State,64,67,⚖️ Balanced
-65,San Diego State,95,29,🛡 Defense-Driven
-66,Wisconsin,106,21,🛡 Defense-Driven
-67,Old Dominion,61,71,⚖️ Balanced
-68,North Carolina,86,47,🛡 Defense-Driven
-69,California,75,60,🛡 Defense-Driven
-70,Army,63,73,⚖️ Balanced
-71,Wake Forest,88,53,🛡 Defense-Driven
-72,Toledo,92,50,🛡 Defense-Driven
-73,Houston,72,69,⚖️ Balanced
-74,Purdue,76,65,🛡 Defense-Driven
-75,Syracuse,89,58,🛡 Defense-Driven
-76,Virginia Tech,66,80,🔥 Offense-Driven
-77,UNLV,48,106,🔥 Offense-Driven
-78,UConn,70,81,🔥 Offense-Driven
-79,UTSA,77,76,⚖️ Balanced
-80,Navy,57,102,🔥 Offense-Driven
-81,Texas State,45,120,🔥 Offense-Driven
-82,Ohio,84,82,⚖️ Balanced
-83,West Virginia,93,72,🛡 Defense-Driven
-84,Marshall,79,90,🔥 Offense-Driven
-85,Stanford,96,77,🛡 Defense-Driven
-86,Western Michigan,125,40,🛡 Defense-Driven
-87,Utah State,65,117,🔥 Offense-Driven
-88,Miami (OH),98,83,🛡 Defense-Driven
-89,South Alabama,78,110,🔥 Offense-Driven
-90,Boston College,82,112,🔥 Offense-Driven
-91,New Mexico,68,122,🔥 Offense-Driven
-92,Air Force,59,132,🔥 Offense-Driven
-93,Oregon State,91,108,🔥 Offense-Driven
-94,App State,80,116,🔥 Offense-Driven
-95,Troy,100,85,🛡 Defense-Driven
-96,Bowling Green,102,86,🛡 Defense-Driven
-97,Hawai'i,103,88,🛡 Defense-Driven
-98,Fresno State,104,87,🛡 Defense-Driven
-99,Louisiana,97,95,⚖️ Balanced
-100,Georgia Southern,69,129,🔥 Offense-Driven
-101,San José State,94,105,🔥 Offense-Driven
-102,Missouri State,107,92,🛡 Defense-Driven
-103,Jacksonville State,87,121,🔥 Offense-Driven
-104,Kennesaw State,110,93,🛡 Defense-Driven
-105,Southern Miss,111,94,🛡 Defense-Driven
-106,Colorado State,101,104,⚖️ Balanced
-107,Eastern Michigan,85,128,🔥 Offense-Driven
-108,Western Kentucky,99,114,🔥 Offense-Driven
-109,Louisiana Tech,124,74,🛡 Defense-Driven
-110,UAB,83,134,🔥 Offense-Driven
-111,Central Michigan,114,99,🛡 Defense-Driven
-112,Buffalo,112,109,⚖️ Balanced
-113,Oklahoma State,115,101,🛡 Defense-Driven
-114,Georgia State,108,118,⚖️ Balanced
-115,Wyoming,127,84,🛡 Defense-Driven
-116,Liberty,116,98,🛡 Defense-Driven
-117,Florida International,120,96,🛡 Defense-Driven
-118,Florida Atlantic,109,119,⚖️ Balanced
-119,Arkansas State,113,115,⚖️ Balanced
-120,Rice,121,97,🛡 Defense-Driven
-121,Tulsa,118,107,🛡 Defense-Driven
-122,Coastal Carolina,126,91,🛡 Defense-Driven
-123,Temple,119,111,⚖️ Balanced
-124,Northern Illinois,134,79,🛡 Defense-Driven
-125,Delaware,105,130,🔥 Offense-Driven
-126,Nevada,123,113,⚖️ Balanced
-127,UTEP,133,103,🛡 Defense-Driven
-128,Middle Tennessee,122,123,⚖️ Balanced
-129,New Mexico State,117,135,🔥 Offense-Driven
-130,Kent State,128,125,⚖️ Balanced
-131,UL Monroe,130,127,⚖️ Balanced
-132,Charlotte,132,124,⚖️ Balanced
-133,Sam Houston,129,131,⚖️ Balanced
-134,Ball State,131,133,⚖️ Balanced
-135,Akron,135,126,⚖️ Balanced
+1,Ohio State,6,1,⚖️ Balanced
+2,Indiana,3,3,⚖️ Balanced
+3,Oklahoma,36,2,🛡 Defense-Driven
+4,Oregon,17,4,🛡 Defense-Driven
+5,Notre Dame,8,13,⚖️ Balanced
+6,Miami,11,11,⚖️ Balanced
+7,Georgia,7,15,⚖️ Balanced
+8,Utah,12,12,⚖️ Balanced
+9,Alabama,5,17,🔥 Offense-Driven
+10,Ole Miss,1,27,🔥 Offense-Driven
+11,Texas Tech,24,8,🛡 Defense-Driven
+12,Iowa,38,7,🛡 Defense-Driven
+13,Texas A&M,4,25,🔥 Offense-Driven
+14,Texas,48,5,🛡 Defense-Driven
+15,Michigan,29,9,🛡 Defense-Driven
+16,USC,2,53,🔥 Offense-Driven
+17,Penn State,13,45,🔥 Offense-Driven
+18,BYU,19,30,🔥 Offense-Driven
+19,Auburn,56,10,🛡 Defense-Driven
+20,LSU,53,14,🛡 Defense-Driven
+21,Vanderbilt,14,56,🔥 Offense-Driven
+22,Louisville,45,24,🛡 Defense-Driven
+23,Missouri,32,33,⚖️ Balanced
+24,Mississippi State,30,37,⚖️ Balanced
+25,SMU,50,18,🛡 Defense-Driven
+26,TCU,18,51,🔥 Offense-Driven
+27,Tennessee,10,70,🔥 Offense-Driven
+28,San Diego State,91,6,🛡 Defense-Driven
+29,Duke,25,47,🔥 Offense-Driven
+30,Kansas State,40,38,⚖️ Balanced
+31,Florida,61,16,🛡 Defense-Driven
+32,Florida State,21,55,🔥 Offense-Driven
+33,South Florida,31,46,🔥 Offense-Driven
+34,North Texas,9,79,🔥 Offense-Driven
+35,Arkansas,15,74,🔥 Offense-Driven
+36,Clemson,46,36,⚖️ Balanced
+37,Pittsburgh,35,43,⚖️ Balanced
+38,Memphis,39,41,⚖️ Balanced
+39,Illinois,16,72,🔥 Offense-Driven
+40,Tulane,49,32,🛡 Defense-Driven
+41,Nebraska,33,54,🔥 Offense-Driven
+42,James Madison,68,22,🛡 Defense-Driven
+43,Arizona,51,34,🛡 Defense-Driven
+44,Washington State,57,31,🛡 Defense-Driven
+45,Georgia Tech,23,66,🔥 Offense-Driven
+46,Cincinnati,20,76,🔥 Offense-Driven
+47,Iowa State,41,57,🔥 Offense-Driven
+48,Virginia,52,42,⚖️ Balanced
+49,Kansas,37,64,🔥 Offense-Driven
+50,Washington,27,75,🔥 Offense-Driven
+51,Arizona State,54,49,⚖️ Balanced
+52,Boise State,69,35,🛡 Defense-Driven
+53,Northwestern,75,29,🛡 Defense-Driven
+54,Maryland,88,19,🛡 Defense-Driven
+55,UCF,62,44,🛡 Defense-Driven
+56,Kentucky,55,52,⚖️ Balanced
+57,East Carolina,73,40,🛡 Defense-Driven
+58,South Carolina,93,23,🛡 Defense-Driven
+59,Michigan State,47,73,🔥 Offense-Driven
+60,Old Dominion,60,61,⚖️ Balanced
+61,Baylor,22,102,🔥 Offense-Driven
+62,Houston,58,69,🔥 Offense-Driven
+63,Toledo,86,39,🛡 Defense-Driven
+64,Colorado,67,59,⚖️ Balanced
+65,NC State,44,92,🔥 Offense-Driven
+66,Wake Forest,106,20,🛡 Defense-Driven
+67,UCLA,65,71,⚖️ Balanced
+68,Army,64,77,🔥 Offense-Driven
+69,Rutgers,28,117,🔥 Offense-Driven
+70,Purdue,78,62,🛡 Defense-Driven
+71,UTSA,76,65,🛡 Defense-Driven
+72,UNLV,34,114,🔥 Offense-Driven
+73,UConn,63,84,🔥 Offense-Driven
+74,California,79,68,🛡 Defense-Driven
+75,North Carolina,113,26,🛡 Defense-Driven
+76,Navy,43,116,🔥 Offense-Driven
+77,Wisconsin,116,28,🛡 Defense-Driven
+78,Western Michigan,125,21,🛡 Defense-Driven
+79,New Mexico,59,98,🔥 Offense-Driven
+80,Minnesota,104,50,🛡 Defense-Driven
+81,Ohio,81,86,⚖️ Balanced
+82,Miami (OH),83,88,⚖️ Balanced
+83,Southern Miss,84,87,⚖️ Balanced
+84,Syracuse,103,60,🛡 Defense-Driven
+85,Virginia Tech,70,105,🔥 Offense-Driven
+86,Air Force,26,135,🔥 Offense-Driven
+87,App State,74,101,🔥 Offense-Driven
+88,Utah State,66,111,🔥 Offense-Driven
+89,Texas State,42,131,🔥 Offense-Driven
+90,West Virginia,108,67,🛡 Defense-Driven
+91,Kennesaw State,92,93,⚖️ Balanced
+92,Marshall,82,107,🔥 Offense-Driven
+93,Louisiana Tech,120,58,🛡 Defense-Driven
+94,Wyoming,123,48,🛡 Defense-Driven
+95,Hawai'i,97,83,🛡 Defense-Driven
+96,South Alabama,72,121,🔥 Offense-Driven
+97,Troy,99,85,🛡 Defense-Driven
+98,Stanford,105,78,🛡 Defense-Driven
+99,San José State,87,106,🔥 Offense-Driven
+100,Louisiana,96,97,⚖️ Balanced
+101,Central Michigan,102,91,🛡 Defense-Driven
+102,Jacksonville State,85,119,🔥 Offense-Driven
+103,Bowling Green,101,96,⚖️ Balanced
+104,Boston College,90,113,🔥 Offense-Driven
+105,Western Kentucky,94,108,🔥 Offense-Driven
+106,Eastern Michigan,80,126,🔥 Offense-Driven
+107,Oregon State,89,120,🔥 Offense-Driven
+108,Liberty,114,82,🛡 Defense-Driven
+109,Georgia Southern,71,133,🔥 Offense-Driven
+110,UAB,77,130,🔥 Offense-Driven
+111,Rice,118,89,🛡 Defense-Driven
+112,Missouri State,115,94,🛡 Defense-Driven
+113,Florida International,122,90,🛡 Defense-Driven
+114,Florida Atlantic,95,124,🔥 Offense-Driven
+115,Fresno State,119,95,🛡 Defense-Driven
+116,Arkansas State,112,103,⚖️ Balanced
+117,Tulsa,111,110,⚖️ Balanced
+118,Temple,109,112,⚖️ Balanced
+119,New Mexico State,107,118,🔥 Offense-Driven
+120,Colorado State,110,115,⚖️ Balanced
+121,UTEP,129,80,🛡 Defense-Driven
+122,Coastal Carolina,128,81,🛡 Defense-Driven
+123,Georgia State,100,127,🔥 Offense-Driven
+124,Northern Illinois,134,63,🛡 Defense-Driven
+125,Delaware,98,132,🔥 Offense-Driven
+126,Middle Tennessee,117,122,⚖️ Balanced
+127,Buffalo,124,109,🛡 Defense-Driven
+128,Kent State,121,123,⚖️ Balanced
+129,Oklahoma State,130,104,🛡 Defense-Driven
+130,Nevada,131,99,🛡 Defense-Driven
+131,UL Monroe,126,129,⚖️ Balanced
+132,Akron,135,100,🛡 Defense-Driven
+133,Charlotte,133,125,⚖️ Balanced
+134,Sam Houston,127,134,⚖️ Balanced
+135,Ball State,132,128,⚖️ Balanced
 136,Massachusetts,136,136,⚖️ Balanced
