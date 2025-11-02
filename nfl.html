@@ -231,7 +231,7 @@
     const norm = s => (s ?? '').toString().toLowerCase().replace(/[^a-z0-9]+/g,'').trim();
 
     const TIGHT = 1.5;
-    const FADE = 5;
+    const FADE = 4.5;
 
     function render(rows){
       if(!rows?.length){ $body.innerHTML = '<tr><td colspan="5" class="muted">No rows</td></tr>'; return; }
