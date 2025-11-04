@@ -3,86 +3,222 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CBB — Utter Locks</title>
-  <meta name="description" content="College Basketball projections and picks by Utter Locks" />
+  <title>Utter Locks — CBB</title>
+  <meta name="description" content="College Basketball Picks (Utter Locks)" />
 
-  <!-- Social share -->
-  <meta property="og:title" content="Utter Locks — College Basketball Picks">
-  <meta property="og:description" content="CBB model projections, adjusted ratings, and top plays.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://utterlocks.github.io/1/cbb.html">
-  <meta property="og:image" content="https://utterlocks.github.io/1/assets/utterlocks-banner.jpg?v=1">
+  <link rel="preconnect" href="https://a.espncdn.com" crossorigin>
   <link rel="icon" type="image/jpeg" href="assets/utter-locks-logo.jpg" />
-
-  <!-- Twitter -->
+  <meta property="og:title" content="Utter Locks — CBB Projections">
+  <meta property="og:description" content="Data-driven CBB projections & picks.">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@UtterLocks">
-  <meta name="twitter:title" content="Utter Locks — CBB">
-  <meta name="twitter:description" content="College Basketball projections and model edges.">
-  <meta name="twitter:image" content="https://utterlocks.github.io/1/assets/utterlocks-banner.jpg?v=1">
 
   <style>
-    :root{ 
-      --bg:#0b1020; --bg2:#0f1730; --card:#111a36; 
-      --text:#eaf0ff; --muted:#a8b3d0; --brand:#ffdc7b; 
-      --accent:#ffd27a; --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    :root{
+      --bg:#0b1020; --bg2:#0f1730; --card:#111a36; --text:#eaf0ff; --muted:#a8b3d0;
+      --brand:#ffdc7b; --good:#fff3a6; --shadow:0 10px 30px rgba(0,0,0,.35); --radius:18px;
+      --pickGlow: 0 0 0 2px rgba(255, 220, 123, .6),
+                  0 0 12px rgba(255, 220, 123, .5),
+                  0 0 24px rgba(255, 220, 123, .4);
+      --pickGlowPulse: 0 0 0 3px rgba(255, 220, 123, .75),
+                       0 0 20px rgba(255, 220, 123, .6),
+                       0 0 36px rgba(255, 220, 123, .5);
+      --tight:#F3C97A;
     }
 
+    *{ box-sizing: border-box }
     body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
       color:var(--text);
       background: radial-gradient(1200px 800px at 10% -20%, var(--bg2), transparent),
                   radial-gradient(1200px 800px at 100% 120%, var(--bg2), transparent),
                   var(--bg);
-      padding:32px; display:flex; flex-direction:column; align-items:center;
+      padding:28px;
     }
-    header{ display:flex; align-items:center; justify-content:space-between; width:100%; max-width:980px; margin-bottom:24px; }
-    .brand{ display:flex; align-items:center; gap:14px; padding:14px 18px; border-radius:calc(var(--radius) + 6px); background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow); }
-    .logo-img{ width:32px; height:32px; border-radius:10px; object-fit:cover; }
-    .title{ font-size:26px; margin:0; }
-    .subtitle{ color:var(--muted); font-size:14px; margin-top:2px; }
+    .shell{ max-width:1100px; margin:0 auto; }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    .brand{ display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:calc(var(--radius) + 6px);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.10); box-shadow:var(--shadow);
+    }
+    .logo-img{ width:28px; height:28px; border-radius:8px; object-fit:cover; }
+    .title{ margin:0; font-size:24px; display:inline-flex; gap:10px; align-items:center; }
+    .title::after{ content:""; width:10px; height:10px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, var(--brand) 30%, var(--good) 100%);
+      box-shadow:0 0 12px rgba(255,220,123,.6);
+    }
+    .subtitle{ margin:2px 0 0; color:var(--muted); font-size:13px }
 
-    main{ width:100%; max-width:980px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px; }
-    h2{ margin-top:0; color:var(--brand); }
-    iframe{ width:100%; height:720px; border:none; border-radius:var(--radius); background:var(--card); }
+    .panel{ background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; backdrop-filter: blur(8px); }
 
-    footer{ margin-top:18px; color:var(--muted); font-size:12px; }
-    footer a{ color:var(--brand); text-decoration:none; }
-    footer a:hover{ text-decoration:underline; }
-    .back{ color:var(--brand); text-decoration:none; font-weight:600; font-size:14px; margin-bottom:16px; display:inline-flex; align-items:center; gap:6px; }
-    .back:hover{ text-decoration:underline; }
+    .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    a.btn, button.btn, label.btn{ appearance:none; cursor:pointer; border:none; text-decoration:none; color:var(--text);
+      background:var(--card); padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.10);
+      font-weight:700; letter-spacing:.3px;
+    }
+    a.btn:hover, button.btn:hover, label.btn:hover{ filter:brightness(1.05) }
+
+    #adminBar{ display:none; gap:8px; align-items:center; }
+    #adminBar.show{ display:flex; }
+    #file{ display:none }
+
+    .table-wrap{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    table{ width:100%; border-collapse:collapse; margin-top:10px; table-layout:auto; min-width:560px; }
+    thead th{ position:sticky; top:0; background:rgba(15,23,48,.9); color:#fff; font-size:13px; letter-spacing:.3px;
+      z-index:1; border-bottom:1px solid rgba(255,255,255,.18);
+    }
+    th, td{ border-bottom:1px solid rgba(255,255,255,.08); padding:10px; text-align:center; vertical-align:middle; }
+    tbody tr:nth-child(odd){ background:rgba(255,255,255,.02); }
+    tbody tr:hover{ background:rgba(255,220,123,.08); box-shadow:inset 0 0 0 9999px rgba(255,220,123,.06); }
+
+    td:nth-child(3), td:nth-child(4), td:nth-child(5), th:nth-child(3), th:nth-child(4), th:nth-child(5){ font-variant-numeric:tabular-nums; }
+
+    td:nth-child(2), th:nth-child(2){ width:1%; }
+    .teams{ display:inline-grid; grid-template-columns:1fr; gap:6px; text-align:left; }
+    .team{ display:flex; align-items:center; gap:8px; min-width:0; }
+    .team img{ height:22px; width:22px; object-fit:contain; border-radius:6px; background:#fff; flex:0 0 22px; transition:box-shadow .35s ease; }
+    .team span{ white-space:nowrap; line-height:1.2; }
+
+    .team.pick img{ box-shadow:var(--pickGlow); animation:glowPulse 2.8s ease-in-out infinite; }
+    @keyframes glowPulse{ 0%,100%{ box-shadow:var(--pickGlow); } 50%{ box-shadow:var(--pickGlowPulse); } }
+    @media (prefers-reduced-motion:reduce){ .team.pick img{ animation:none; } }
+
+    .scores{ display:grid; gap:6px; justify-items:center; text-align:center; }
+    .score{ line-height:1.2; font-variant-numeric:tabular-nums; }
+
+    .muted{ color:var(--muted); }
+    .num{ white-space:nowrap; }
+    .chev{ font-size:13px; opacity:.9; margin-left:6px; }
+
+    .tight-dot{ display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--tight);
+      box-shadow:0 0 0 1px rgba(255,255,255,.15), 0 0 8px rgba(243,201,122,.45); margin-left:6px; vertical-align:middle;
+    }
+
+    footer{ text-align:center; margin-top:14px; color:var(--muted); font-size:12px }
   </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FGSY9FNSQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7FGSY9FNSQ');
+  </script>
 </head>
-
 <body>
-  <header>
-    <div class="brand">
-      <img class="logo-img" src="assets/utter-locks-logo.jpg" alt="Utter Locks logo">
-      <div>
-        <h1 class="title">Utter Locks</h1>
-        <p class="subtitle">College Basketball Model</p>
+  <div class="shell">
+    <header>
+      <div class="brand">
+        <img class="logo-img" src="assets/utter-locks-logo.jpg" alt="Utter Locks logo">
+        <div>
+          <h1 class="title">Utter Locks — CBB</h1>
+          <p class="subtitle">College Basketball Picks</p>
+        </div>
       </div>
-    </div>
-  </header>
+      <div class="row">
+        <a class="btn" href="index.html">← Home</a>
+        <div id="adminBar">
+          <input id="file" type="file" accept=".csv" />
+          <label class="btn" for="file">Preview CSV (admin)</label>
+          <button class="btn" id="useRepo">Use repo data</button>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <a class="back" href="index.html">← Back to Home</a>
-    <h2>College Basketball — Model Projections</h2>
-    <p>Real-time updates from the <strong>Utter Locks CBB Model</strong> — featuring adjusted efficiencies, pace, and projected spreads/totals.</p>
+    <section class="panel">
+      <div class="table-wrap">
+        <table id="tbl">
+          <colgroup>
+            <col class="col-idx">
+            <col class="col-teams">
+            <col class="col-spr">
+            <col class="col-tot">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Teams</th>
+              <th>Spread (A-H)</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="body"></tbody>
+        </table>
+      </div>
+    </section>
 
-    <!-- Embed your GT table or CSV-driven dashboard -->
-    <iframe src="cbb_table.html?v=1" title="CBB Table"></iframe>
-
-    <p style="margin-top:12px; font-size:13px; color:var(--muted);">Last updated: <span id="updated"></span></p>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Utter Locks • Data for entertainment only
-  </footer>
+    <footer>© <span id="year"></span> Utter Locks • Advice/Analysis Only</footer>
+  </div>
 
   <script>
+    const $body = document.getElementById('body');
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('updated').textContent = new Date().toLocaleString();
+
+    const isAdmin = new URLSearchParams(location.search).get('admin') === '1' || location.hostname === 'localhost';
+    if(isAdmin) document.getElementById('adminBar').classList.add('show');
+
+    const CSV_OVERRIDE = new URLSearchParams(location.search).get('csv');
+    const REPO_CSV = CSV_OVERRIDE ? new URL(CSV_OVERRIDE, location.href).toString()
+                                  : new URL('./data/cbb_live.csv', location.href).toString();
+
+    document.getElementById('useRepo').addEventListener('click', loadFromRepo);
+    document.getElementById('file').addEventListener('change', e=>{
+      const f = e.target.files?.[0]; if(!f) return;
+      const r = new FileReader();
+      r.onload = ev => render(parseCSV(ev.target.result));
+      r.readAsText(f);
+    });
+
+    loadFromRepo();
+
+    async function loadFromRepo(){
+      try{
+        const bust = Date.now();
+        const url = REPO_CSV + (REPO_CSV.includes('?') ? `&v=${bust}` : `?v=${bust}`);
+        const res = await fetch(url);
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        render(parseCSV(await res.text()));
+      }catch(err){
+        $body.innerHTML = `<tr><td colspan="4" class="muted">Could not load CSV. ${err.message}</td></tr>`;
+      }
+    }
+
+    function parseCSV(text){
+      const lines = text.replace(/\r/g,'').split('\n').filter(Boolean);
+      const header = lines[0].split(',');
+      return lines.slice(1).map(l=>{
+        const cells = l.split(',');
+        const row = {}; header.forEach((h,i)=> row[h.trim()] = (cells[i] ?? '').trim());
+        return row;
+      });
+    }
+
+    function n(x){ const v=Number(x); return Number.isFinite(v)?v:null; }
+    const norm=s=> (s??'').toLowerCase().replace(/[^a-z0-9]/g,'');
+
+    function render(rows){
+      if(!rows?.length){ $body.innerHTML='<tr><td colspan="4" class="muted">No rows</td></tr>'; return; }
+
+      $body.innerHTML = rows.map((r,i)=>{
+        const idx=i+1, a=r.Away||'', h=r.Home||'';
+        const xspr=n(r.xSpread), xtot=n(r.xTotal);
+        const sprTxt=xspr!=null?(xspr>0?`+${xspr.toFixed(1)}`:xspr.toFixed(1)):'—';
+        const totTxt=xtot!=null?xtot.toFixed(1):'—';
+
+        return `
+          <tr>
+            <td class="num">${idx}</td>
+            <td>
+              <div class="teams">
+                <div class="team"><span>${a}</span></div>
+                <div class="team"><span>${h}</span></div>
+              </div>
+            </td>
+            <td>${sprTxt}</td>
+            <td>${totTxt}</td>
+          </tr>`;
+      }).join('');
+    }
   </script>
 </body>
 </html>
