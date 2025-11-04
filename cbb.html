@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CBB — Utter Locks</title>
+  <meta name="description" content="College Basketball projections and picks by Utter Locks" />
+
+  <!-- Social share -->
+  <meta property="og:title" content="Utter Locks — College Basketball Picks">
+  <meta property="og:description" content="CBB model projections, adjusted ratings, and top plays.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://utterlocks.github.io/1/cbb.html">
+  <meta property="og:image" content="https://utterlocks.github.io/1/assets/utterlocks-banner.jpg?v=1">
+  <link rel="icon" type="image/jpeg" href="assets/utter-locks-logo.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@UtterLocks">
+  <meta name="twitter:title" content="Utter Locks — CBB">
+  <meta name="twitter:description" content="College Basketball projections and model edges.">
+  <meta name="twitter:image" content="https://utterlocks.github.io/1/assets/utterlocks-banner.jpg?v=1">
+
+  <style>
+    :root{ 
+      --bg:#0b1020; --bg2:#0f1730; --card:#111a36; 
+      --text:#eaf0ff; --muted:#a8b3d0; --brand:#ffdc7b; 
+      --accent:#ffd27a; --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 10% -20%, var(--bg2), transparent),
+                  radial-gradient(1200px 800px at 100% 120%, var(--bg2), transparent),
+                  var(--bg);
+      padding:32px; display:flex; flex-direction:column; align-items:center;
+    }
+    header{ display:flex; align-items:center; justify-content:space-between; width:100%; max-width:980px; margin-bottom:24px; }
+    .brand{ display:flex; align-items:center; gap:14px; padding:14px 18px; border-radius:calc(var(--radius) + 6px); background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow); }
+    .logo-img{ width:32px; height:32px; border-radius:10px; object-fit:cover; }
+    .title{ font-size:26px; margin:0; }
+    .subtitle{ color:var(--muted); font-size:14px; margin-top:2px; }
+
+    main{ width:100%; max-width:980px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px; }
+    h2{ margin-top:0; color:var(--brand); }
+    iframe{ width:100%; height:720px; border:none; border-radius:var(--radius); background:var(--card); }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:12px; }
+    footer a{ color:var(--brand); text-decoration:none; }
+    footer a:hover{ text-decoration:underline; }
+    .back{ color:var(--brand); text-decoration:none; font-weight:600; font-size:14px; margin-bottom:16px; display:inline-flex; align-items:center; gap:6px; }
+    .back:hover{ text-decoration:underline; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img class="logo-img" src="assets/utter-locks-logo.jpg" alt="Utter Locks logo">
+      <div>
+        <h1 class="title">Utter Locks</h1>
+        <p class="subtitle">College Basketball Model</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← Back to Home</a>
+    <h2>College Basketball — Model Projections</h2>
+    <p>Real-time updates from the <strong>Utter Locks CBB Model</strong> — featuring adjusted efficiencies, pace, and projected spreads/totals.</p>
+
+    <!-- Embed your GT table or CSV-driven dashboard -->
+    <iframe src="cbb_table.html?v=1" title="CBB Table"></iframe>
+
+    <p style="margin-top:12px; font-size:13px; color:var(--muted);">Last updated: <span id="updated"></span></p>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Utter Locks • Data for entertainment only
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
