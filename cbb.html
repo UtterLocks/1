@@ -18,13 +18,6 @@
       --bg:#0b1020; --bg2:#0f1730; --card:#111a36; --text:#eaf0ff; --muted:#a8b3d0;
       --brand:#7bdcff; --good:#78ffa6;
       --shadow:0 10px 30px rgba(0,0,0,.35); --radius:18px;
-      --pickGlow: 0 0 0 2px rgba(255,77,77,.6),
-                  0 0 12px rgba(255,77,77,.5),
-                  0 0 24px rgba(255,77,77,.4);
-      --pickGlowPulse: 0 0 0 3px rgba(255,77,77,.75),
-                       0 0 20px rgba(255,77,77,.6),
-                       0 0 36px rgba(255,77,77,.5);
-      --tight:#F3C97A;
     }
 
     *{ box-sizing: border-box }
@@ -91,21 +84,11 @@
       font-size:12px; padding:6px 2px 0;
     }
     .legend span{ display:inline-flex; align-items:center; gap:6px; }
-    .legend .grade-demo{
-      display:inline-block; width:14px; height:14px;
-      border-radius:4px; background:#fff;
-      box-shadow: 0 0 10px rgba(123,220,255,.55);
-    }
-    .legend .tight-dot{
-      display:inline-block; width:7px; height:7px; border-radius:50%;
-      background:var(--tight);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.15), 0 0 8px rgba(243,201,122,.45);
-    }
 
     .table-wrap{ width:100%; overflow-x:auto; -webkit-overflow-scrolling: touch; }
     table{
       width:100%; border-collapse: collapse; margin-top:12px;
-      table-layout: auto; min-width: 720px;
+      table-layout: auto; min-width: 640px;
     }
     thead th{
       position:sticky; top:0;
@@ -125,17 +108,15 @@
       box-shadow: inset 0 0 0 9999px rgba(123,220,255,.06);
     }
 
-    td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6),
-    th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6){
+    td:nth-child(3), td:nth-child(4), th:nth-child(3), th:nth-child(4){
       font-variant-numeric: tabular-nums;
     }
 
     col.col-idx{ width:56px; }
     col.col-teams{ width:1%; }
+    col.col-proj{ width:120px; }
     col.col-xspr{ width:110px; }
     col.col-xtot{ width:110px; }
-    col.col-sprbet{ width:120px; }
-    col.col-totbet{ width:110px; }
 
     .teams{ display:inline-grid; grid-template-columns: 1fr; gap:6px; text-align:left; }
     .team{ display:flex; align-items:center; gap:8px; min-width: 0; }
@@ -144,23 +125,17 @@
     .muted{ color:var(--muted) }
     .num{ white-space:nowrap; }
 
-    .tight-dot{
-      display:inline-block; width:7px; height:7px; border-radius:50%;
-      background:var(--tight);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.15), 0 0 8px rgba(243,201,122,.45);
-      margin-left:6px; vertical-align:middle;
+    .scores{
+      display:grid;
+      grid-auto-rows:min-content;
+      gap:4px;
+      justify-items:center;
+      align-content:center;
+      text-align:center;
     }
-    .chev{ font-size:13px; opacity:.9; margin-left:6px; }
-
-    /* Glow on spread pick team text when A-grade */
-    @keyframes glowPulseRed{
-      0%,100% { text-shadow: 0 0 0 rgba(255,77,77,0.0); }
-      50%     { text-shadow: 0 0 14px rgba(255,77,77,.9); }
-    }
-    .team.pick span{
-      color:#ffd9d9;
-      text-shadow:0 0 10px rgba(255,77,77,.8);
-      animation: glowPulseRed 2.4s ease-in-out infinite;
+    .score{
+      line-height:1.2;
+      font-variant-numeric:tabular-nums;
     }
 
     @media (max-width: 780px){
@@ -169,15 +144,14 @@
       .subtitle{ font-size:12px; }
       th, td{ padding:8px 6px; font-size:13px; }
       .team span{ font-size:13px; }
-      table{ min-width: 620px; }
+      table{ min-width: 580px; }
     }
     @media (max-width: 560px){
       .table-wrap table{ table-layout: fixed; }
       col.col-teams{ width:46%; }
-      col.col-xspr{   width:96px; }
+      col.col-proj{   width:96px; }
+      col.col-xspr{   width:90px; }
       col.col-xtot{   width:90px; }
-      col.col-sprbet{ width:104px; }
-      col.col-totbet{ width:96px; }
       th:nth-child(2), td:nth-child(2){ width:auto; }
       .team span{ white-space:normal; }
       .legend{ font-size:11px; }
@@ -185,7 +159,7 @@
     @media (max-width: 520px){
       th:first-child, td:first-child{ display:none; }
       .title{ font-size:20px; }
-      table{ min-width: 520px; }
+      table{ min-width: 500px; }
       .teams{ display:grid; }
     }
 
@@ -214,11 +188,7 @@
 
     <section class="panel">
       <div class="legend" aria-label="Legend">
-        <span><span class="grade-demo" aria-hidden="true"></span> A-Grade (≤ 1.5 from model)</span>
-        <span><span class="tight-dot" aria-hidden="true"></span> Tight edge on spread/total</span>
-        <span><span class="chev" aria-hidden="true">▲</span> Total Bet: Over</span>
-        <span><span class="chev" aria-hidden="true">▼</span> Total Bet: Under</span>
-        <span>Glowing team text = A-Grade spread pick</span>
+        <span>A-Grade: Vegas Line − Utter Line is 1.5 or less at close</span>
       </div>
 
       <div class="table-wrap">
@@ -226,19 +196,17 @@
           <colgroup>
             <col class="col-idx">
             <col class="col-teams">
+            <col class="col-proj">
             <col class="col-xspr">
             <col class="col-xtot">
-            <col class="col-sprbet">
-            <col class="col-totbet">
           </colgroup>
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Teams</th>
+              <th scope="col">Proj (A-H)</th>
               <th scope="col">xSpread (A-H)</th>
               <th scope="col">xTotal</th>
-              <th scope="col">Spread Bet</th>
-              <th scope="col">Total Bet</th>
             </tr>
           </thead>
           <tbody id="body"></tbody>
@@ -281,7 +249,7 @@
         render(parseCSV(await res.text()));
       }catch(err){
         console.error(err);
-        $body.innerHTML = `<tr><td colspan="6" class="muted">Could not fetch CSV. ${err.message}.<br>Make sure the file exists at <code>${REPO_CSV}</code>.</td></tr>`;
+        $body.innerHTML = `<tr><td colspan="5" class="muted">Could not fetch CSV. ${err.message}.<br>Make sure the file exists at <code>${REPO_CSV}</code>.</td></tr>`;
       }
     }
 
@@ -289,114 +257,77 @@
       const lines = text.replace(/\r/g,'').split('\n').filter(Boolean);
       if(lines.length < 2) return [];
 
+      // First row: Null Null Home Away ... xHome xAway xSpread xTotal
       const header = lines[0].split(/\t|,/).map(h => h.trim().toLowerCase());
 
       const col = {
-        home: header.indexOf("home"),
-        away: header.indexOf("away"),
-        xSpread: header.indexOf("xspread"),
-        xTotal: header.indexOf("xtotal"),
-        spreadBet: header.indexOf("spread bet"),
-        totalBet: header.indexOf("total bet"),
-        spreadEdge: header.indexOf("spread edge"),
-        totalEdge: header.indexOf("total edge")
+        home:    header.indexOf("home"),
+        away:    header.indexOf("away"),
+        xhome:   header.indexOf("xhome"),
+        xaway:   header.indexOf("xaway"),
+        xspread: header.indexOf("xspread"),
+        xtotal:  header.indexOf("xtotal")
       };
 
       return lines.slice(1).map(line => {
         const cells = line.split(/\t|,/).map(c => c.trim());
         return {
-          home: cells[col.home] || "",
-          away: cells[col.away] || "",
-          xSpread: cells[col.xSpread] || "",
-          xTotal: cells[col.xTotal] || "",
-          spreadBet: cells[col.spreadBet] || "",
-          totalBet: cells[col.totalBet] || "",
-          spreadEdge: col.spreadEdge >= 0 ? cells[col.spreadEdge] || "" : "",
-          totalEdge: col.totalEdge >= 0 ? cells[col.totalEdge] || "" : ""
+          home:   col.home   >= 0 ? (cells[col.home]   || "") : "",
+          away:   col.away   >= 0 ? (cells[col.away]   || "") : "",
+          xHome:  col.xhome  >= 0 ? (cells[col.xhome]  || "") : "",
+          xAway:  col.xaway  >= 0 ? (cells[col.xaway]  || "") : "",
+          xSpread:col.xspread>= 0 ? (cells[col.xspread]|| "") : "",
+          xTotal: col.xtotal >= 0 ? (cells[col.xtotal] || "") : ""
         };
       });
     }
 
-    function getNum(str){
-      if(!str) return null;
-      const m = str.match(/(-?\d+(\.\d+)?)/);
-      return m ? Number(m[0]) : null;
-    }
-
-    const TIGHT = 1.5;
-
-    function norm(s){
-      return (s || "").toLowerCase().replace(/[^a-z0-9]/g,'');
-    }
-
-    function isAGradeSpread(row){
-      const xs = Number(row.xSpread);
-      const vegas = getNum(row.spreadBet);
-      return Number.isFinite(xs) && Number.isFinite(vegas) && Math.abs(vegas - xs) <= TIGHT;
-    }
-
-    function isAGradeTotal(row){
-      const xt = Number(row.xTotal);
-      const vegas = getNum(row.totalBet);
-      return Number.isFinite(xt) && Number.isFinite(vegas) && Math.abs(vegas - xt) <= TIGHT;
+    function n(x){
+      const v = Number(x);
+      return Number.isFinite(v) ? v : null;
     }
 
     function render(rows){
       if(!rows?.length){
-        $body.innerHTML = '<tr><td colspan="6" class="muted">No rows</td></tr>';
+        $body.innerHTML = '<tr><td colspan="5" class="muted">No rows</td></tr>';
         return;
       }
-
-      const tightDotHTML = '<span class="tight-dot" aria-hidden="true"></span>';
 
       $body.innerHTML = rows.map((r,idx)=>{
         const i = idx + 1;
         const a = r.away || "";
         const h = r.home || "";
 
-        const xs = Number(r.xSpread);
-        const xt = Number(r.xTotal);
+        const xa = n(r.xAway);
+        const xh = n(r.xHome);
+        const xs = n(r.xSpread);
+        const xt = n(r.xTotal);
 
-        const spreadAGrade = isAGradeSpread(r);
-        const totalAGrade  = isAGradeTotal(r);
+        const projHTML = `
+          <div class="scores">
+            <div class="score">${xa != null ? xa.toFixed(1) : "—"}</div>
+            <div class="score">${xh != null ? xh.toFixed(1) : "—"}</div>
+          </div>
+        `;
 
-        // determine which team is the spread pick
-        const spreadBetStr = r.spreadBet || "";
-        const teamPart = spreadBetStr.replace(/(-?\d+(\.\d+)?)\s*$/,'').trim();
-        const betNorm = norm(teamPart);
-        const isAwayPick = spreadAGrade && betNorm && betNorm === norm(a);
-        const isHomePick = spreadAGrade && betNorm && betNorm === norm(h);
+        const sprTxt = xs != null
+          ? (xs > 0 ? `+${xs.toFixed(1)}` : xs.toFixed(1))
+          : "—";
 
-        const totalBetStr = r.totalBet || "";
-        const totalBetLower = totalBetStr.toLowerCase();
-        let chev = '';
-        if(totalBetLower.startsWith('over'))  chev = '<span class="chev" aria-hidden="true">▲</span>';
-        if(totalBetLower.startsWith('under')) chev = '<span class="chev" aria-hidden="true">▼</span>';
-
-        const sprTxt = Number.isFinite(xs)
-          ? `${xs>0?`+${xs.toFixed(1)}`:xs.toFixed(1)}${spreadAGrade ? tightDotHTML : ''}`
-          : '—';
-
-        const totTxt = Number.isFinite(xt)
-          ? `${xt.toFixed(1)}${totalAGrade ? tightDotHTML : ''}${chev}`
-          : '—';
-
-        const spreadBetCell = spreadBetStr || '—';
-        const totalBetCell  = totalBetStr || '—';
+        const totTxt = xt != null ? xt.toFixed(1) : "—";
 
         return `
           <tr>
             <td class="num">${i}</td>
             <td>
               <div class="teams">
-                <div class="team ${isAwayPick ? 'pick' : ''}"><span>${a}</span></div>
-                <div class="team ${isHomePick ? 'pick' : ''}"><span>${h}</span></div>
+                <div class="team"><span>${a}</span></div>
+                <div class="team"><span>${h}</span></div>
               </div>
             </td>
+            <td>${projHTML}</td>
             <td>${sprTxt}</td>
             <td>${totTxt}</td>
-            <td>${spreadBetCell}</td>
-            <td>${totalBetCell}</td>
           </tr>
         `;
       }).join('');
