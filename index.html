@@ -42,11 +42,27 @@
     *{ box-sizing:border-box }
     html,body{ height:100% }
     body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text);
-      background: radial-gradient(1200px 800px at 10% -20%, var(--bg2), transparent), radial-gradient(1200px 800px at 100% 120%, var(--bg2), transparent), var(--bg);
-      display:flex; align-items:center; justify-content:center; padding:32px;
-    }
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color:var(--text);
+
+  /* SOLID fallback first — screenshot tools always capture this */
+  background-color: var(--bg);
+
+  /* Your gradients layered on top */
+  background-image:
+    radial-gradient(1200px 800px at 10% -20%, var(--bg2), transparent),
+    radial-gradient(1200px 800px at 100% 120%, var(--bg2), transparent);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
     .shell{ max-width:980px; width:100% }
 
     header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px; }
