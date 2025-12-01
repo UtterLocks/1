@@ -1,40 +1,9 @@
 Null,Null,Home,Away,Null,Null,Null,xHome,xAway,xSpread,xTotal
-1,10:00 PM,Oregon St.,Cal Baptist,1.185,1.054,67.2,66.6,68.2,1.6,134.8
-2,10:00 PM,Pacific,Sacramento St.,1.1655,1.0115,68.9,80.7,68.8,-11.9,149.5
-3,12:00 PM,Indiana,Bethune Cookman,1.0255,1.0705,75.0,87.1,61.2,-25.9,148.3
-4,1:00 PM,Northern Kentucky,Boston University,1.152,1.0725,63.1,76.8,71.4,-5.4,148.2
-5,1:00 PM,Army,Manhattan,1.144,1.1145,68.9,75.0,80.4,5.4,155.4
-6,1:00 PM,Niagara,Detroit Mercy,1.0665,1.1135,68.7,75.5,70.7,-4.8,146.2
-7,1:00 PM,Louisiana Tech,Alcorn St.,0.9935,1.105,67.0,75.4,66.0,-9.4,141.4
-8,1:00 PM,UCF,VMI,0.9445,1.1095,72.6,92.3,68.5,-23.8,160.8
-9,2:00 PM,IU Indy,Morehead St.,1.0315,1.0415,71.4,86.1,80.5,-5.6,166.6
-10,2:00 PM,Northwestern St.,Southern,1.1445,1.033,67.5,75.8,76.5,0.7,152.3
-11,2:00 PM,Georgia Southern,Houston Christian,1.1135,1.046,71.8,78.2,71.3,-6.9,149.5
-12,2:00 PM,Saint Peter's,Dartmouth,1.083,1.1515,73.4,73.9,70.4,-3.5,144.3
-13,2:00 PM,George Mason,James Madison,1.1625,1.11,73.7,78.3,62.1,-16.2,140.4
-14,2:00 PM,Harvard,Bryant,1.057,1.1425,77.6,75.1,64.4,-10.7,139.5
-15,2:00 PM,UMBC,Delaware St.,1.067,1.0515,73.9,78.8,63.8,-15.0,142.6
-16,2:00 PM,High Point,Western Carolina,1.049,1.021,70.0,90.2,70.7,-19.5,160.9
-17,2:00 PM,Nebraska,USC Upstate,1.126,0.9955,71.6,92.2,66.7,-25.5,158.9
-18,2:00 PM,Georgia,Tennessee Tech,1.1505,1.09,64.9,95.0,65.7,-29.3,160.7
-19,3:00 PM,UT Arlington,Stephen F. Austin,1.0445,1.0525,68.1,69.4,71.6,2.2,141.0
-20,3:00 PM,Southeast Missouri,Lipscomb,1.0655,1.09,73.9,69.7,65.7,-4.0,135.4
-21,3:00 PM,Valparaiso,Western Michigan,1.0655,1.09,73.9,71.9,72.4,0.5,144.3
-22,3:00 PM,UNC Wilmington,Gardner Webb,1.0655,1.09,73.9,90.2,65.4,-24.8,155.6
-23,4:00 PM,Elon,Mercer,1.0655,1.09,73.9,85.2,79.5,-5.7,164.7
-24,4:00 PM,American,Siena,1.0655,1.09,73.9,69.3,70.8,1.5,140.1
-25,4:00 PM,Mount St. Mary's,Howard,1.0655,1.09,73.9,73.7,67.2,-6.5,140.9
-26,4:00 PM,East Tennessee St.,Central Arkansas,1.0655,1.09,73.9,78.8,68.4,-10.4,147.2
-27,4:00 PM,Weber St.,Kansas City,1.0655,1.09,73.9,79.6,66.5,-13.1,146.1
-28,4:00 PM,Utah St.,Montana St.,1.0655,1.09,73.9,82.4,65.0,-17.4,147.4
-29,4:00 PM,Arizona,Norfolk St.,1.0655,1.09,73.9,85.2,55.6,-29.6,140.8
-30,4:00 PM,Winthrop,South Carolina St.,1.0655,1.09,73.9,87.6,66.6,-21.0,154.2
-31,4:30 PM,Penn,La Salle,1.0655,1.09,73.9,77.5,72.9,-4.6,150.4
-32,4:30 PM,Lafayette,Ball St.,1.0655,1.09,73.9,73.2,71.5,-1.7,144.7
-33,5:00 PM,Eastern Kentucky,Wofford,1.0655,1.09,73.9,79.2,79.3,0.1,158.5
-34,5:00 PM,Cal St. Fullerton,Pepperdine,1.0655,1.09,73.9,79.6,80.4,0.8,160.0
-35,5:00 PM,Utah Tech,UC Riverside,1.0655,1.09,73.9,70.9,69.0,-1.9,139.9
-36,6:00 PM,Canisius,Buffalo,1.0655,1.09,73.9,69.4,73.8,4.4,143.2
-37,6:00 PM,Penn St.,Sacred Heart,1.0655,1.09,73.9,85.8,71.8,-14.0,157.6
-38,7:00 PM,Southern Illinois,Little Rock,1.0655,1.09,73.9,83.1,68.6,-14.5,151.7
-39,7:00 PM,Akron,Milwaukee,1.0655,1.09,73.9,92.0,76.7,-15.3,168.7
+1,10:00 PM,Stanford,Portland,1.141,0.966,73.1,83.4,70.6,-12.8,154.0
+2,6:30 PM,Villanova,Temple,1.254,1.029,65.8,82.6,67.8,-14.8,150.4
+3,7:00 PM,Delaware,Iona,1.086,1.095,71.7,77.8,78.4,0.6,156.2
+4,7:00 PM,Jacksonville St.,North Alabama,1.058,0.995,65.1,68.8,64.7,-4.1,133.5
+5,7:00 PM,Cincinnati,Tarleton St.,1.161,0.891,72.3,83.9,64.5,-19.4,148.4
+8,7:30 PM,Middle Tennessee,UAB,1.05,1.09,70.6,74.1,76.9,2.8,151.0
+10,8:00 PM,Kansas St.,Bowling Green,1.143,0.979,75.6,86.5,74.1,-12.4,160.6
+11,9:00 PM,Colorado,Cal Baptist,1.115,1.025,69.1,77.0,70.8,-6.2,147.8
