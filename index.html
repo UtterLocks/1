@@ -42,26 +42,26 @@
     *{ box-sizing:border-box }
     html,body{ height:100% }
     body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  color:var(--text);
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
 
-  /* SOLID fallback first — screenshot tools always capture this */
-  background-color: var(--bg);
+      /* Solid fallback */
+      background-color: var(--bg);
 
-  /* Your gradients layered on top */
-  background-image:
-    radial-gradient(1200px 800px at 10% -20%, var(--bg2), transparent),
-    radial-gradient(1200px 800px at 100% 120%, var(--bg2), transparent);
+      /* Layered gradients */
+      background-image:
+        radial-gradient(1200px 800px at 10% -20%, var(--bg2), transparent),
+        radial-gradient(1200px 800px at 100% 120%, var(--bg2), transparent);
 
-  background-size: cover;
-  background-repeat: no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:32px;
-}
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
 
     .shell{ max-width:980px; width:100% }
 
@@ -92,11 +92,11 @@
     .btn[data-sport="CFB"]{ background:linear-gradient(180deg, rgba(120,255,166,.12), rgba(120,255,166,.02)), var(--card); }
     .btn[data-sport="CBB"]{ background:linear-gradient(180deg, rgba(255,220,123,.12), rgba(255,220,123,.02)), var(--card); }
     .btn[data-sport="WNBA"]{ background:linear-gradient(180deg, rgba(255,163,97,.14), rgba(255,163,97,.03)), var(--card); }
-    .btn[data-sport="NBA"]{ background:linear-gradient(180deg, rgba(173,134,255,.14), rgba(173,134,255,.03)), var(--card); }
     .btn[data-sport="Tracking"]{ background:linear-gradient(180deg, rgba(255,97,153,.14), rgba(255,97,153,.03)), var(--card); }
+
     .btn::after{ content:""; position:absolute; inset:-40% -20%; transform:skewX(-25deg) translateX(-120%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); transition: transform .6s ease; }
     .btn:hover::after{ transform:skewX(-25deg) translateX(160%); }
-    @media (prefers-reduced-motion: reduce){ .btn, .btn::after{ transition:none; } }
+
     .arrow{ font-size:18px; opacity:.55; transform: translateX(0); transition:.18s transform ease, .18s opacity ease; }
     .btn:hover .arrow{ transform: translateX(2px); opacity:.9; }
 
@@ -105,7 +105,7 @@
     footer a:hover{ text-decoration:underline; }
   </style>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FGSY9FNSQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -132,7 +132,6 @@
         <a class="btn" data-sport="CFB" href="cfb.html"><span>CFB</span> <span class="arrow">→</span></a>
         <a class="btn" data-sport="CBB" href="cbb.html"><span>CBB</span> <span class="arrow">→</span></a>
         <a class="btn" data-sport="WNBA" href="wnba.html"><span>WNBA</span> <span class="arrow">→</span></a>
-        <a class="btn" data-sport="NBA" href="nba.html"><span>NBA</span> <span class="arrow">→</span></a>
         <a class="btn" data-sport="Tracking" href="tracking.html"><span>Tracking</span> <span class="arrow">→</span></a>
       </nav>
     </main>
@@ -144,11 +143,13 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // 1–6 shortcuts for quick nav
+
+    // Keyboard shortcuts 1–5 (NBA removed = now 5 sections)
     const links = Array.from(document.querySelectorAll('nav a.btn'));
     window.addEventListener('keydown', e => {
       if (e.altKey || e.ctrlKey || e.metaKey) return;
-      const n = e.key.charCodeAt(0) - 48; if (n>=1 && n<=links.length) { links[n-1].focus(); links[n-1].click(); }
+      const n = e.key.charCodeAt(0) - 48;
+      if (n>=1 && n<=links.length) { links[n-1].focus(); links[n-1].click(); }
     });
   </script>
 </body>
