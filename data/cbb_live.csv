@@ -1,12 +1,36 @@
 Null,Null,Home,Away,Null,Null,Null,xHome,xAway,xSpread,xTotal
-1,12:00 AM,South Carolina St.,Delaware St.,0.993,0.989,67.3,66.8,66.5,-0.2,133.3
-2,12:00 AM,Tarleton St.,Abilene Christian,1.139,1.056,68.8,78.4,72.7,-5.7,151.1
-3,12:00 AM,Fairleigh Dickinson,Le Moyne,1.046,1.1,66.4,69.4,73,3.6,142.4
-4,12:00 AM,Stonehill,Central Connecticut,1.058,1.082,63.5,67.1,68.7,1.5,135.8
-5,12:00 AM,Duke,Louisville,1.17,1.087,69.4,81.2,75.5,-5.8,156.7
-6,12:00 AM,Norfolk St.,Morgan St.,1.139,0.988,69.9,79.6,69,-10.6,148.6
-7,12:00 AM,Texas A&M Corpus Chris,UT Rio Grande Valley,1.035,0.965,65.3,67.6,63,-4.6,130.6
-8,12:00 AM,BYU,Arizona,1.043,1.185,73.7,76.8,87.3,10.5,164.2
-9,12:00 AM,Bethune Cookman,Alcorn St.,1.175,0.98,68.8,80.9,67.4,-13.5,148.4
-10,12:00 AM,Florida A&M,Jackson St.,1.111,0.984,71.3,79.2,70.2,-9.1,149.4
-11,12:00 AM,Ohio St.,Penn St.,1.283,1.06,65.9,84.6,69.9,-14.7,154.5
+1,12:00 AM,Lamar,East Texas A&M,1.111,0.99,67,74.4,66.3,-8.1,140.8
+2,12:00 AM,Prairie View A&M,Alabama A&M,1.083,1.045,71,76.8,74.1,-2.7,151
+3,12:00 AM,Southeastern Louisiana,McNeese,0.927,1.011,64.7,60,65.5,5.5,125.4
+4,12:00 AM,Stephen F. Austin,Northwestern St.,1.232,1.009,63.3,78,63.9,-14.1,141.9
+5,12:00 AM,Houston Christian,Incarnate Word,1.106,1.164,62.3,68.9,72.5,3.6,141.4
+6,12:00 AM,Nicholls,New Orleans,1.123,1.039,70.3,78.9,73,-5.9,151.9
+7,12:00 AM,Texas Southern,Alabama St.,1.107,1.104,71.7,79.4,79.2,-0.2,158.6
+8,12:00 AM,Kent St.,Ohio,1.202,1.099,73.4,88.3,80.7,-7.6,169
+9,12:00 AM,Connecticut,Providence,1.279,1.008,69.4,88.7,69.9,-18.8,158.7
+10,12:00 AM,Marquette,Creighton,1.1,1.131,68.1,74.9,77,2.1,151.9
+11,12:00 AM,Akron,Toledo,1.323,1.112,72,95.2,80,-15.2,175.2
+12,12:00 AM,Bowling Green,Buffalo,1.173,1.047,66.4,77.8,69.5,-8.4,147.3
+13,12:00 AM,Central Michigan,Eastern Michigan,1.007,1.11,63.7,64.1,70.7,6.6,134.8
+14,12:00 AM,Dayton,Rhode Island,1.072,0.983,65.8,70.5,64.6,-5.9,135.1
+15,12:00 AM,Indiana,Purdue,1.118,1.189,64.6,72.2,76.8,4.6,148.9
+16,12:00 AM,Miami OH,Massachusetts,1.201,1.06,75,90,79.5,-10.6,169.5
+17,12:00 AM,Michigan,Nebraska,1.152,0.996,72,82.9,71.7,-11.2,154.5
+18,12:00 AM,N.C. State,Syracuse,1.199,1.045,69.4,83.3,72.5,-10.7,155.8
+19,12:00 AM,Notre Dame,Virginia,1.053,1.183,63.1,66.5,74.7,8.2,141.2
+20,12:00 AM,Pittsburgh,Wake Forest,1.128,1.112,65.9,74.4,73.3,-1.1,147.7
+21,12:00 AM,Rutgers,Michigan St.,0.909,1.164,63.4,57.6,73.7,16.1,131.3
+22,12:00 AM,UCF,Arizona St.,1.227,1.109,71.3,87.5,79.1,-8.4,166.7
+23,12:00 AM,VCU,Richmond,1.221,1.064,69.8,85.2,74.3,-10.9,159.5
+24,12:00 AM,Virginia Tech,Georgia Tech,1.154,1.026,71.2,82.1,73,-9.1,155.1
+25,12:00 AM,West Virginia,Kansas St.,1.161,1.055,66.7,77.4,70.4,-7,147.8
+26,12:00 AM,Alabama,Missouri,1.221,1.082,71.5,87.4,77.4,-10,164.8
+27,12:00 AM,Illinois Chicago,Indiana St.,1.14,1.019,67.5,77,68.8,-8.2,145.8
+28,12:00 AM,Loyola Chicago,Saint Joseph's,1.024,1.147,66.3,67.9,76.1,8.2,144
+29,12:00 AM,Northern Illinois,Western Michigan,1.083,1.103,68,73.7,75,1.3,148.7
+30,12:00 AM,Oklahoma,Arkansas,1.173,1.21,70.9,83.2,85.8,2.6,169
+31,12:00 AM,Saint Louis,George Washington,1.257,1.023,73.4,92.3,75.1,-17.2,167.4
+32,12:00 AM,Vanderbilt,Kentucky,1.146,1.066,70.8,81.1,75.4,-5.7,156.6
+33,12:00 AM,Nevada,Grand Canyon,1.091,1.036,65.6,71.6,68,-3.6,139.6
+34,12:00 AM,San Jose St.,Boise St.,1.011,1.194,62.5,63.2,74.7,11.4,137.9
+35,12:00 AM,UNLV,New Mexico,1.06,1.161,72.8,77.2,84.5,7.3,161.8
